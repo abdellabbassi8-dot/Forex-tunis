@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="تعلم التداول من الصفر حتى الاحتراف مع Forex Tunis - أقوى أكاديمية فوركس في تونس والوطن العربي"/>
+  <meta name="keywords" content="تعلم فوركس, تداول من الصفر, اكاديمية فوركس, فوركس تونس, forex tunis"/>
+  <title>Forex Tunis | تعلم التداول من الصفر حتى الاحتراف</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #5e1d9c;
+      --accent: #ff2e96;
+      --dark: #0b0517;
+      --darker: #080312;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      background: var(--dark);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    #progress-bar {
+      position: fixed; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      transform: scaleX(0); transform-origin: left; z-index: 9999;
+      transition: transform 0.2s;
+    }
+
+    .lang-switcher {
+      position: fixed; top: 25px; left: 25px; z-index: 9999; display: flex;
+      background: rgba(255,255,255,0.07); backdrop-filter: blur(15px);
+      border-radius: 50px; border: 1px solid rgba(255,46,150,0.4); overflow: hidden;
+    }
+    .lang-btn {
+      padding: 14px 30px; font-weight: 700; font-size: 1.1rem; color: #ddd; cursor: pointer; transition: all 0.4s;
+    }
+    .lang-btn.active { background: var(--accent); color: #fff; box-shadow: 0 0 30px rgba(255,46,150,0.7); }
+
+    header {
+      min-height: 100vh;
+      background: linear-gradient(rgba(11,5,23,0.85), rgba(11,5,23,0.95)), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1600') center/cover no-repeat;
+      display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+      position: relative; padding: 0 20px;
+    }
+    #particles-js { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+
+    .hero-content { position: relative; z-index: 2; max-width: 900px; }
+
+    header h1 {
+      font-size: 5.5rem; font-weight: 900;
+      background: linear-gradient(90deg, #fff, var(--accent));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 20px; text-shadow: 0 0 30px rgba(255,46,150,0.4);
+    }
+
+    header p {
+      font-size: 1.8rem; margin: 20px auto; max-width: 800px; opacity: 0.95;
+    }
+
+    header .highlight {
+      font-size: 2.2rem; color: var(--accent); font-weight: 900; margin: 25px 0;
+    }
+
+    .btn-primary {
+      background: var(--accent); color: #fff; padding: 20px 60px; border-radius: 50px;
+      font-size: 1.5rem; font-weight: 700; margin-top: 30px; box-shadow: 0 10px 30px rgba(255,46,150,0.4);
+      transition: all 0.4s; position: relative; overflow: hidden; display: inline-block;
+    }
+    .btn-primary:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(255,46,150,0.6); }
+
+    section { padding: 100px 20px; }
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 20px; }
+    h2 { font-size: 3.5rem; text-align: center; margin-bottom: 60px;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900;
+    }
+
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .feature-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px;
+      padding: 40px 25px; text-align: center; border: 1px solid rgba(255,46,150,0.2); transition: all 0.4s;
+    }
+    .feature-card i { font-size: 3.5rem; color: var(--accent); margin-bottom: 20px; }
+    .feature-card:hover { transform: translateY(-20px); background: rgba(255,46,150,0.1); }
+
+    .stats { background: linear-gradient(135deg, var(--primary), var(--darker));
+      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); padding: 120px 20px; margin: 100px 0;
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; text-align: center; }
+    .stat-card .number { font-size: 4rem; font-weight: 900; color: var(--accent); }
+
+    .form-section { background: linear-gradient(135deg, var(--darker), #1a0d2e); padding: 120px 20px; }
+    .form-container { max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.05);
+      padding: 50px; border-radius: 25px; backdrop-filter: blur(15px); border: 1px solid rgba(255,46,150,0.3);
+    }
+    input, select { width: 100%; padding: 16px 20px; border: none; border-radius: 12px;
+      background: rgba(255,255,255,0.1); color: #fff; font-size: 1.1rem; margin: 12px 0;
+    }
+    input::placeholder { color: #ccc; }
+    input[type="submit"] { background: var(--accent); font-weight: 700; font-size: 1.3rem; cursor: pointer; transition: 0.4s; }
+    input[type="submit"]:hover { background: #ff5ab3; transform: scale(1.05); }
+
+    footer { background: #000; padding: 60px 20px 30px; text-align: center; }
+    .social-links a { color: #fff; font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
+    .social-links a:hover { color: var(--accent); transform: translateY(-5px); }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 3.8rem; }
+      header p { font-size: 1.4rem; }
+      header .highlight { font-size: 1.8rem; }
+      .btn-primary { padding: 16px 40px; font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="lang-switcher">
+    <div class="lang-btn active" data-lang="ar">عربي</div>
+    <div class="lang-btn" data-lang="en">English</div>
+  </div>
+
+  <header id="home">
+    <div id="particles-js"></div>
+    <div class="hero-content" data-aos="fade-up">
+      <h1 data-key="title">Forex Touns</h1>
+      <p data-key="subtitle">تعلم التداول من الصفر حتى الاحتراف مع Forex Touns<br><span class="highlight">متوفر 24/7</span></p>
+      <a href="#register" class="btn-primary" data-key="btn">ابدأ الآن مجانًا</a>
+    </div>
+  </header>
+
+  <!-- باقي الصفحة كما هي -->
+  <section id="features">
+    <div class="container">
+      <h2 data-key="why">لماذا نحن الأفضل؟</h2>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-chart-line"></i>
+          <h3 data-key="f1">تحليلات دقيقة 99.9%</h3>
+          <p data-key="f1d">نستخدم أحدث تقنيات الذكاء الاصطناعي والتحليل الفني</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-shield-alt"></i>
+          <h3 data-key="f2">أمان مضمون</h3>
+          <p data-key="f2d">ترخيص دولي وحماية كاملة لرأس المال</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-users"></i>
+          <h3 data-key="f3">مجتمع قوي</h3>
+          <p data-key="f3d">أكثر من 15 ألف متداول ناجح معنا</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-headset"></i>
+          <h3 data-key="f4">دعم فني 24/7</h3>
+          <p data-key="f4d">فريق دعم عربي في خدمتك على مدار الساعة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" data-aos="zoom-in"><span class="number">+15,000</span><p data-key="s1">عميل نشط</p></div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200"><span class="number">+8,000</span><p data-key="s2">تدريب منجز</p></div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="400"><span class="number">99%</span><p data-key="s3">معدل رضا</p></div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="600"><span class="number">4.9</span><p data-key="s4">تقييم على Trustpilot</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="register">
+    <div class="container">
+      <h2 data-key="offer">عرض خاص لفترة محدودة</h2>
+      <p style="text-align:center; font-size:1.5rem; margin-bottom:50px;" data-key="offertext">
+        سجّل الآن واحصل على حساب تجريبي بـ 10,000$ + دورة تدريبية مجانية كاملة
+      </p>
+      <div class="form-container" data-aos="fade-up" style="margin-top:40px;">
+  <form 
+    action="https://script.google.com/macros/s/AKfycbyIkjmVf6Y_bZaQsGQhatB1G8nsD5O3SlqP44vUNGF5rx_DbcXmGAYzMjf950zJed54Dw/exec" 
+    method="POST"
+    style="display:flex; flex-direction:column; gap:15px;"
+  
+
+    <input type="text" name="first_name" placeholder="الاسم الأول" required
+      style="padding:15px; border-radius:10px; border:none; background:#2a2a3c; color:white;">
+
+    <input type="text" name="last_name" placeholder="اسم العائلة" required
+      style="padding:15px; border-radius:10px; border:none; background:#2a2a3c; color:white;">
+
+    <input type="email" name="email" placeholder="البريد الإلكتروني" required
+      style="padding:15px; border-radius:10px; border:none; background:#2a2a3c; color:white;">
+
+    <input type="tel" name="phone" placeholder="رقم الجوال (+216)" required
+      style="padding:15px; border-radius:10px; border:none; background:#2a2a3c; color:white;">
+
+    <select name="country" required
+      style="padding:15px; border-radius:10px; border:none; background:#2a2a3c; color:white;">
+      <option value="" disabled selected>اختر بلدك</option>
+      <option>تونس</option>
+      <option>الجزائر</option>
+      <option>المغرب</option>
+      <option>مصر</option>
+      <option>السعودية</option>
+      <option>الإمارات</option>
+      <option>قطر</option>
+      <option>الكويت</option>
+    </select>
+
+    <input type="submit" value="سجل الآن مجانا"
+      style="padding:15px; border-radius:10px; border:none; background:#ff007a; color:white; font-weight:bold;">
+  
+  </form>
+</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <h3 style="margin-bottom:30px; font-size:2rem;">Forex Touns</h3>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p style="margin-top:40px; opacity:0.7;">© 2025 Forex Touns - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    particlesJS("particles-js", {"particles":{"number":{"value":80},"color":{"value":"#ff2e96"},"opacity":{"value":0.5,"random":true},"size":{"value":3,"random":true},"line_linked":{"enable":true,"distance":150,"color":"#ff2e96","opacity":0.3,"width":1},"move":{"enable":true,"speed":3}},"interactivity":{"events":{"onhover":{"enable":true,"mode":"repulse"}}}});
+
+    AOS.init({duration:1000, once:true});
+
+    window.onscroll = function() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progress-bar").style.transform = "scaleX(" + scrolled/100 + ")";
+    };
+
+    // الترجمة الكاملة والصحيحة
+    const t = {
+      ar: {
+        title:"Forex Touns",
+        subtitle:"تعلم التداول من الصفر حتى الاحتراف مع Forex Touns<br><span class='highlight'>متوفر 24/7</span>",
+        btn:"ابدأ الآن مجانًا",
+        why:"لماذا نحن الأفضل؟",
+        f1:"تحليلات دقيقة 99.9%", f1d:"نستخدم أحدث تقنيات الذكاء الاصطناعي والتحليل الفني",
+        f2:"أمان مضمون", f2d:"ترخيص دولي وحماية كاملة لرأس المال",
+        f3:"مجتمع قوي", f3d:"أكثر من 15 ألف متداول ناجح معنا",
+        f4:"دعم فني 24/7", f4d:"فريق دعم عربي في خدمتك على مدار الساعة",
+        s1:"عميل نشط", s2:"تدريب منجز", s3:"معدل رضا", s4:"تقييم على Trustpilot",
+        offer:"عرض خاص لفترة محدودة",
+        offertext:"سجّل الآن واحصل على حساب تجريبي بـ 10,000$ + دورة تدريبية مجانية كاملة",
+        country:"اختر بلدك"
+      },
+      en: {
+        title:"Forex Touns",
+        subtitle:"Learn Trading from Zero to Professional with Forex Touns<br><span class='highlight'>Available 24/7</span>",
+        btn:"Start Now For Free",
+        why:"Why Choose Us?",
+        f1:"99.9% Accurate Analysis", f1d:"We use the latest AI and technical analysis technologies",
+        f2:"Guaranteed Security", f2d:"International license and full capital protection",
+        f3:"Strong Community", f3d:"More than 15K successful traders with us",
+        f4:"24/7 Support", f4d:"Arabic support team at your service around the clock",
+        s1:"Active Clients", s2:"Trainings Completed", s3:"Satisfaction Rate", s4:"Trustpilot Rating",
+        offer:"Limited Time Offer",
+        offertext:"Register now and get $10,000 demo account + FREE full training course",
+        country:"Choose your country"
+      }
+    };
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang==='ar'?'rtl':'ltr';
+        document.body.style.textAlign = lang==='ar'?'right':'left';
+
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const switcher = document.querySelector('.lang-switcher');
+        switcher.style.left = lang==='en'?'auto':'25px';
+        switcher.style.right = lang==='en'?'25px':'auto';
+
+        document.querySelectorAll('[data-key]').forEach(el => {
+          if(t[lang][el.dataset.key]) el.innerHTML = t[lang][el.dataset.key];
+        });
+
+        document.querySelectorAll('input, select').forEach(el => {
+          if(el.dataset[lang]) el.placeholder = el.dataset[lang];
+          if(el.type==='submit') el.value = lang==='ar'?'سجل الآن مجانا':'Register Now Free';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
