@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أفضل منصات الكريبتو 2025</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- ★★★★★ غيّر الروابط هنا بـ affiliate links متاعك الخاصة ★★★★★ -->
+    <script>
+        const links = {
+            kucoin:  "https://www.kucoin.com/ucenter/signup?rcode=YOUR_KUCOIN_CODE",   // ← حط رابطك هنا
+            coinbase:"https://www.coinbase.com/join/YOUR_COINBASE_CODE",              // ← حط رابطك هنا
+            binance: "https://accounts.binance.com/register?ref=YOUR_BINANCE_CODE",  // ← حط رابطك هنا
+            bybit:   "https://www.bybit.com/register?ref=YOUR_BYBIT_CODE",           // ← حط رابطك هنا
+            okx:     "https://www.okx.com/join/YOUR_OKX_CODE"                        // ← حط رابطك هنا
+        };
+    </script>
+    <!-- ★★★★★ انتهى التعديل ★★★★★ -->
+
+    <style>
+        :root {
+            --primary: #5e1d9c;
+            --accent: #ff2e96;
+            --dark: #0b0517;
+            --gray: #1a0d2e;
+            --light: #f0e6ff;
+            --gradient: linear-gradient(135deg, #5e1d9c, #ff2e96);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            min-height: 100vh;
+        }
+
+        .lang-switch { position: fixed; top: 20px; left: 20px; z-index: 1001; background: var(--gray); padding: 12px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; color: white; box-shadow: 0 0 25px rgba(94,29,156,0.6); transition: 0.3s; }
+        .lang-switch:hover { background: var(--primary); transform: scale(1.05); }
+
+        .menu-btn { position: fixed; top: 20px; right: 20px; width: 50px; height: 50px; background: var(--gradient); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; cursor: pointer; z-index: 1000; box-shadow: 0 0 30px rgba(255,46,150,0.5); }
+
+        .sidebar { position: fixed; top: 0; right: -300px; width: 280px; height: 100vh; background: rgba(8,3,18,0.98); backdrop-filter: blur(15px); padding: 90px 25px 30px; transition: 0.5s ease; z-index: 999; border-left: 4px solid var(--accent); }
+        .sidebar.active { right: 0; }
+        .sidebar h2 { color: var(--accent); text-align: center; font-size: 28px; margin-bottom: 40px; }
+        .sidebar a { display: flex; align-items: center; gap: 15px; padding: 16px 20px; color: #ddd; text-decoration: none; margin: 10px 0; border-radius: 15px; transition: 0.4s; font-weight: 600; }
+        .sidebar a:hover { background: var(--gradient); color: white; transform: translateX(-12px); }
+
+        .container { max-width: 1300px; margin: 0 auto; padding: 120px 20px 60px; text-align: center; }
+
+        .header h1 { font-size: 48px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; font-weight: 900; }
+        .header p { font-size: 22px; opacity: 0.9; max-width: 900px; margin: 0 auto 50px; }
+
+        .stats { font-size: 24px; margin: 60px 0; }
+        .stats span { color: var(--accent); font-weight: 900; font-size: 32px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+
+        .exchange-card { background: var(--gray); border-radius: 28px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.6); transition: all 0.5s ease; border: 1px solid rgba(255,46,150,0.2); }
+        .exchange-card:hover { transform: translateY(-20px) scale(1.03); box-shadow: 0 30px 70px rgba(255,46,150,0.4); }
+
+        .card-header { padding: 0; height: 280px; background: #000; }
+        .card-header img { width: 100%; height: 100%; object-fit: cover; border-radius: 28px 28px 0 0; }
+
+        .card-body { padding: 35px 25px; }
+        .bonus { font-size: 30px; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 20px 0; }
+        .btn { display: inline-block; padding: 18px 55px; background: var(--gradient); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; transition: 0.4s; box-shadow: 0 10px 30px rgba(255,46,150,0.5); }
+        .btn:hover { transform: scale(1.08); box-shadow: 0 20px 50px rgba(255,46,150,0.7); }
+    </style>
+</head>
+<body>
+
+    <div class="lang-switch" onclick="toggleLang()">EN</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <div class="sidebar" id="sidebar">
+        <h2 data-ar="القائمة" data-en="Menu">القائمة</h2>
+        <a href="#"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+        <a href="#"><i class="fas fa-chart-line"></i> <span data-ar="إحصائيات" data-en="Stats">إحصائيات</span></a>
+        <a href="#"><i class="fas fa-link"></i> <span data-ar="الروابط" data-en="Links">الروابط</span></a>
+        <a href="#"><i class="fas fa-cog"></i> <span data-ar="الإعدادات" data-en="Settings">الإعدادات</span></a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> <span data-ar="خروج" data-en="Logout">خروج</span></a>
+    </div>
+
+    <div class="container">
+        <div class="header" data-aos="fade-down">
+            <h1 data-ar="أفضل منصات التداول 2025" data-en="Best Crypto Exchanges 2025">أفضل منصات التداول 2025</h1>
+            <p data-ar="سجّل من خلال روابطي الخاصة واحصل على أكبر البونيسات + خصم مدى الحياة" data-en="Register via my links & get the biggest bonuses + lifetime discount">
+                سجّل من خلال روابطي الخاصة واحصل على أكبر البونيسات + خصم مدى الحياة
+            </p>
+        </div>
+
+        <div class="stats" data-aos="fade-up">
+            <span data-ar="تم التسجيل حتى الآن:" data-en="Total Registrations:">تم التسجيل حتى الآن:</span> 
+            <span>+1,247</span> <span data-ar="شخص" data-en="users">شخص</span> | 
+            <span data-ar="إجمالي الأرباح:" data-en="Total Earnings:">إجمالي الأرباح:</span> 
+            <span>$84,291</span>
+        </div>
+
+        <div class="grid">
+
+            <!-- KuCoin -->
+            <div class="exchange-card" data-aos="zoom-in">
+                <div class="card-header"><img src="https://i.ibb.co/YTTnhH1p/1764779872518.jpg" alt="KuCoin"></div>
+                <div class="card-body">
+                    <a href="#" onclick="window.open(links.kucoin,'_blank')" class="btn" data-ar="سجل الآن →" data-en="Register Now →">سجل الآن →</a>
+                </div>
+            </div>
+
+            <!-- Coinbase -->
+            <div class="exchange-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card-header"><img src="https://i.ibb.co/Z6kH3B5t/1764779802321.jpg" alt="Coinbase"></div>
+                <div class="card-body">
+                    <a href="#" onclick="window.open(links.coinbase,'_blank')" class="btn" data-ar="سجل الآن →" data-en="Register Now →">سجل الآن →</a>
+                </div>
+            </div>
+
+            <!-- Binance -->
+            <div class="exchange-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card-header"><img src="https://i.ibb.co/nM40N7dz/1764779921093.jpg" alt="Binance"></div>
+                <div class="card-body">
+                    <a href="#" onclick="window.open(links.binance,'_blank')" class="btn" data-ar="تسجيل فوري →" data-en="Instant Signup →">تسجيل فوري →</a>
+                </div>
+            </div>
+
+            <!-- Bybit -->
+            <div class="exchange-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card-header"><img src="https://i.ibb.co/5xxHqWKS/1764779892210.jpg" alt="Bybit"></div>
+                <div class="card-body">
+                    <a href="#" onclick="window.open(links.bybit,'_blank')" class="btn" data-ar="خذ البونيس →" data-en="Claim Bonus →">خذ البونيس →</a>
+                </div>
+            </div>
+
+            <!-- OKX -->
+            <div class="exchange-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="card-header"><img src="https://i.ibb.co/KcGngwC3/1764779841229.jpg" alt="OKX"></div>
+                <div class="card-body">
+                    <a href="#" onclick="window.open(links.okx,'_blank')" class="btn" data-ar="سجل واحصل →" data-en="Register & Get →">سجل واحصل →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+
+        function toggleLang() {
+            const isRTL = document.body.dir === "rtl";
+            document.body.dir = isRTL ? "ltr" : "rtl";
+            document.documentElement.lang = isRTL ? "en" : "ar";
+            document.querySelector(".lang-switch").textContent = isRTL ? "العربية" : "EN";
+            document.querySelectorAll("[data-ar][data-en]").forEach(el => {
+                el.textContent = isRTL ? el.dataset.en : el.dataset.ar;
+            });
+        }
+    </script>
+</body>
+</html>
