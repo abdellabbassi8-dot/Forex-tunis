@@ -315,6 +315,16 @@
       });
     });
   </script>
+<script>
+  const isRegistered = localStorage.getItem("is_registered");
 
+  if (isRegistered === "true") {
+    // إذا عامل كلمة سر → يدخل للداشبورد
+    window.location.href = "dashboard.html";
+  } else {
+    // إذا مازال → يمشي يعمل كلمة سر
+    window.location.href = "create-password.html";
+  }
+</script>
 </body>
 </html>
